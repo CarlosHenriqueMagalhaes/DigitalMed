@@ -1,0 +1,9 @@
+A versão 3 do Spring Boot foi lançada em novembro de 2022, 
+trazendo algumas novidades em relação à versão anterior.
+ Dentre as principais novidades, se destacam:
+
+Suporte ao Java 17
+Migração das especificações do Java EE para o Jakarta EE
+Suporte a imagens nativas
+Você pode ver a lista completa de novidades da versão 3 do Spring Boot no site: 
+https://github.com/spring-projects/spring-boot/wiki/Spring-Boot-3.0-Release-Notes

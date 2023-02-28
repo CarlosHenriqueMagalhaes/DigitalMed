@@ -1,0 +1,17 @@
+POST: htpp:localhost:8066/medicos
+
+{
+	"nome":"",
+	"email":"",
+	"crm":"",
+	"especialidade":"",
+	"endereco":{
+		"logradouro":"",
+		"bairro":"",
+		"cep":"",
+		"cidade":"",
+		"uf":"",
+		"numero":"",
+		"complemento":""
+	}
+}

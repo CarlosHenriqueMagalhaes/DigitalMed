@@ -1,17 +1,18 @@
-POST: htpp:localhost:8066/medicos
+POST: http://localhost:8084/medicos:
 
 {
-	"nome":"",
-	"email":"",
-	"crm":"",
-	"especialidade":"",
+	"nome":"Carlos Henrique",
+	"email":"carlos.hzero@mail.com",
+	"crm":"007108",
+	"telefone":"(35)71143-0599",
+	"especialidade":"CARDIOLOGIA",
 	"endereco":{
-		"logradouro":"",
-		"bairro":"",
-		"cep":"",
-		"cidade":"",
-		"uf":"",
-		"numero":"",
-		"complemento":""
+		"logradouro":"Serra de Lurdes",
+		"bairro":"Vila Rios",
+		"cep":"37051100",
+		"cidade":"Pouso Alegre do Sapucaí",
+		"uf":"MG",
+		"numero":"7",
+		"complemento":"Casa A"
 	}
 }

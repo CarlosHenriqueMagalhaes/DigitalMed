@@ -1,4 +1,4 @@
-package br.whitefox.project.digitalmed.endereco;
+package br.com.whitefox.project.digital.med.endereco;
 
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.Pattern;
@@ -17,6 +17,5 @@ public record DadosEndereco(
         String uf,
         @NotBlank
         String numero,
-        String complemento)
-        {
+        String complemento) {
 }

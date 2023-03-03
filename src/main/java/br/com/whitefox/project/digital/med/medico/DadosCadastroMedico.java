@@ -1,6 +1,6 @@
-package br.whitefox.project.digitalmed.medico;
+package br.com.whitefox.project.digital.med.medico;
 
-import br.whitefox.project.digitalmed.endereco.DadosEndereco;
+import br.com.whitefox.project.digital.med.endereco.DadosEndereco;
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotBlank;

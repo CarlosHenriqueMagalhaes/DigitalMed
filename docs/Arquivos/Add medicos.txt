@@ -16,3 +16,53 @@ POST: http://localhost:8084/medicos:
 		"complemento":"Casa A"
 	}
 }
+------------------------------------------------
+{
+	"nome":"Felipe Luis",
+	"email":"felipe.olrox@mail.com",
+	"crm":"006108",
+	"telefone":"(35)99221-9966",
+	"especialidade":"ORTOPEDIA",
+	"endereco":{
+		"logradouro":"Castro Edson Duarte",
+		"bairro":"Anchieta",
+		"cep":"37051500",
+		"cidade":"Pouso Alegre do Sapucaí",
+		"uf":"MG",
+		"numero":"9"
+	}
+}
+------------------------------------------------
+{
+	"nome":"Sanara Magalhães",
+	"email":"sana.hina@mail.com",
+	"crm":"007105",
+	"telefone":"(35)71143-9905",
+	"especialidade":"DERMATOLOGIA",
+	"endereco":{
+		"logradouro":"Serra de Lurdes",
+		"bairro":"Vila Rios",
+		"cep":"37051100",
+		"cidade":"Pouso Alegre do Sapucaí",
+		"uf":"MG",
+		"numero":"7",
+		"complemento":"Casa A"
+	}
+}
+-----------------------------------------------------
+{
+	"nome":"Silvia da Silva",
+	"email":"silvinha.medcom@mail.com",
+	"crm":"007101",
+	"telefone":"(35)99254-9636",
+	"especialidade":"GINECOLOGIA",
+	"endereco":{
+		"logradouro":"Rua: Machado de Assis",
+		"bairro":"Anchieta",
+		"cep":"37051400",
+		"cidade":"Pouso Alegre do Sapucaí",
+		"uf":"MG",
+		"numero":"521",
+		"complemento":"Apto: 202"
+	}
+}

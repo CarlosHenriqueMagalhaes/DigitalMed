@@ -1,9 +1,6 @@
 package br.com.whitefox.project.digital.med.controllers;
 
-import br.com.whitefox.project.digital.med.paciente.DadosCadastroPaciente;
-import br.com.whitefox.project.digital.med.paciente.DadosListagemPaciente;
-import br.com.whitefox.project.digital.med.paciente.Paciente;
-import br.com.whitefox.project.digital.med.paciente.PacienteRepository;
+import br.com.whitefox.project.digital.med.paciente.*;
 import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
@@ -26,6 +23,20 @@ public class PacienteController {
 
     @GetMapping
     public Page<DadosListagemPaciente> listar(@PageableDefault(page = 0, size = 10, sort = {"nome"}) Pageable paginacao) {
-        return pacienteRepository.findAll(paginacao).map(DadosListagemPaciente::new);
+        return pacienteRepository.findAllByAtivoTrue(paginacao).map(DadosListagemPaciente::new);
+    }
+
+    @PutMapping
+    @Transactional
+    public void atualizar(@RequestBody @Valid DadosAtualizacaoPaciente dados) {
+        var paciente = pacienteRepository.getReferenceById(dados.id());
+        paciente.atualizarInformacoes(dados);
+    }
+
+    @DeleteMapping("/{id}")
+    @Transactional
+    public void remover(@PathVariable Long id) {
+        var paciente = pacienteRepository.getReferenceById(id);
+        paciente.inativar();
     }
 }

@@ -6,3 +6,7 @@ Documentação para Application Properties
 
 https://docs.spring.io/spring-boot/docs/current/reference/html/application-properties.html
 ------------------------------------------------------------------------
+Tipos de autenticação
+
+https://www.alura.com.br/artigos/tipos-de-autenticacao
+------------------------------------------------------------------------

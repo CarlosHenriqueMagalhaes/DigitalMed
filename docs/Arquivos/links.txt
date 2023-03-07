@@ -2,3 +2,7 @@ Instalação e configuração mysql
 
 https://www.alura.com.br/artigos/mysql-instalacao-configuracao
 ------------------------------------------------------------------------
+Documentação para Application Properties
+
+https://docs.spring.io/spring-boot/docs/current/reference/html/application-properties.html
+------------------------------------------------------------------------

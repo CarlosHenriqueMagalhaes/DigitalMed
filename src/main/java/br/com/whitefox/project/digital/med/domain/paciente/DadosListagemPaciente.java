@@ -1,4 +1,4 @@
-package br.com.whitefox.project.digital.med.paciente;
+package br.com.whitefox.project.digital.med.domain.paciente;
 
 public record DadosListagemPaciente(Long id, String nome, String email, String cpf) {
     public DadosListagemPaciente(Paciente paciente) {

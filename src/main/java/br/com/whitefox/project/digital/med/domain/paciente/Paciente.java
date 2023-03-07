@@ -1,6 +1,6 @@
-package br.com.whitefox.project.digital.med.paciente;
+package br.com.whitefox.project.digital.med.domain.paciente;
 
-import br.com.whitefox.project.digital.med.endereco.Endereco;
+import br.com.whitefox.project.digital.med.domain.endereco.Endereco;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.EqualsAndHashCode;

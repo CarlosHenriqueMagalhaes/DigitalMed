@@ -1,6 +1,6 @@
-package br.com.whitefox.project.digital.med.medico;
+package br.com.whitefox.project.digital.med.domain.medico;
 
-import br.com.whitefox.project.digital.med.endereco.Endereco;
+import br.com.whitefox.project.digital.med.domain.endereco.Endereco;
 
 public record DadosDetalhamentoMedico(Long id, String nome, String email, String crm,String telefone, Especialidade especialidade, Endereco endereco) {
 

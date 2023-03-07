@@ -1,4 +1,4 @@
-package br.com.whitefox.project.digital.med.endereco;
+package br.com.whitefox.project.digital.med.domain.endereco;
 
 import jakarta.persistence.Embeddable;
 import lombok.AllArgsConstructor;

@@ -4,6 +4,7 @@ import jakarta.servlet.FilterChain;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import org.springframework.web.filter.OncePerRequestFilter;
 
@@ -16,9 +17,13 @@ import java.io.IOException;
 @Component
 public class FiltroDeSeguranca extends OncePerRequestFilter {
 
+    @Autowired
+    private TokenService tokenService;
+
     /**
      * filterChain.doFilter(request,response): necessário para chamar os próximos
      * filtros na aplicação
+     * var subject = tokenService.getSubject(tokeJWT): valida o token recebido
      * @param request
      * @param response
      * @param filterChain
@@ -29,6 +34,7 @@ public class FiltroDeSeguranca extends OncePerRequestFilter {
     protected void doFilterInternal(HttpServletRequest request, HttpServletResponse response,
                                     FilterChain filterChain) throws ServletException, IOException {
         var tokeJWT = recuperarToken(request);
+        var subject = tokenService.getSubject(tokeJWT);
         filterChain.doFilter(request,response);
     }
 

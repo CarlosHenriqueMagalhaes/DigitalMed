@@ -26,6 +26,12 @@ public class Usuario implements UserDetails {
     private String login;
     private String senha;
 
+    /**
+     *  public Collection<? extends GrantedAuthority> getAuthorities() {
+     *         return List.of(new SimpleGrantedAuthority("ROLE_USER"));
+     *  nesse método setamos uma regra padrão para todo tipo de Usuário.
+     * @return
+     */
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {
         return List.of(new SimpleGrantedAuthority("ROLE_USER"));

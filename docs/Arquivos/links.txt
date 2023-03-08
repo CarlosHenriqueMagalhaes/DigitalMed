@@ -18,3 +18,13 @@ Gerar Bcrypt apartir de uma String
 
 https://bcrypt-generator.com/
 ------------------------------------------------------------------------
+JSON Web Token, ou JWT, é um padrão utilizado para a geração de tokens,
+que nada mais são do que Strings, representando, de maneira segura,
+informações que serão compartilhadas entre dois sistemas.
+
+https://jwt.io/introduction
+https://jwt.io/
+https://jwt.io/libraries
+https://jwt.io/libraries?language=Java
+https://github.com/auth0/java-jwt
+------------------------------------------------------------------------

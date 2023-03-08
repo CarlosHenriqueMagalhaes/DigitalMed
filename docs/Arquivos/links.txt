@@ -10,3 +10,7 @@ Tipos de autenticação
 
 https://www.alura.com.br/artigos/tipos-de-autenticacao
 ------------------------------------------------------------------------
+Sobre queries SQL
+
+https://docs.spring.io/spring-data/jpa/docs/current/reference/html/
+------------------------------------------------------------------------

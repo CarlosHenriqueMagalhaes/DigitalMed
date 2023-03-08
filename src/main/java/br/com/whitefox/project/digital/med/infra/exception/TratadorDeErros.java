@@ -1,4 +1,4 @@
-package br.com.whitefox.project.digital.med.infra;
+package br.com.whitefox.project.digital.med.infra.exception;
 
 import jakarta.persistence.EntityNotFoundException;
 import org.springframework.http.ResponseEntity;

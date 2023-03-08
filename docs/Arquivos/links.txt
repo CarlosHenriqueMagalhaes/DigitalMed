@@ -14,3 +14,7 @@ Sobre queries SQL
 
 https://docs.spring.io/spring-data/jpa/docs/current/reference/html/
 ------------------------------------------------------------------------
+Gerar Bcrypt apartir de uma String
+
+https://bcrypt-generator.com/
+------------------------------------------------------------------------

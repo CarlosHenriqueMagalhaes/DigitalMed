@@ -1,6 +1,8 @@
 package br.com.whitefox.project.digital.med.controllers;
 
 import br.com.whitefox.project.digital.med.domain.usuario.DadosAutenticacao;
+import br.com.whitefox.project.digital.med.domain.usuario.Usuario;
+import br.com.whitefox.project.digital.med.infra.security.TokenService;
 import jakarta.validation.Valid;
 import org.apache.coyote.Response;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -18,6 +20,9 @@ public class AutenticacaoController {
     @Autowired
     private AuthenticationManager authenticationManager;
 
+    @Autowired
+    private TokenService tokenService;
+
     /**
      * A linha:
      * var authentication = authenticationManager.authenticate(token);
@@ -31,6 +36,6 @@ public class AutenticacaoController {
     public ResponseEntity efetuarLogin(@RequestBody @Valid DadosAutenticacao dadosAutenticacao) {
         var token = new UsernamePasswordAuthenticationToken(dadosAutenticacao.login(), dadosAutenticacao.senha());
         var authentication = authenticationManager.authenticate(token);
-        return ResponseEntity.ok("");
+        return ResponseEntity.ok(tokenService.gerarToken((Usuario) authentication.getPrincipal()));
     }
 }

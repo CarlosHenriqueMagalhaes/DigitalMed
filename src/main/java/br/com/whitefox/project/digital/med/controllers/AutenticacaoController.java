@@ -2,9 +2,9 @@ package br.com.whitefox.project.digital.med.controllers;
 
 import br.com.whitefox.project.digital.med.domain.usuario.DadosAutenticacao;
 import br.com.whitefox.project.digital.med.domain.usuario.Usuario;
+import br.com.whitefox.project.digital.med.infra.security.DadosTokenJWT;
 import br.com.whitefox.project.digital.med.infra.security.TokenService;
 import jakarta.validation.Valid;
-import org.apache.coyote.Response;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.authentication.AuthenticationManager;
@@ -34,8 +34,9 @@ public class AutenticacaoController {
      */
     @PostMapping
     public ResponseEntity efetuarLogin(@RequestBody @Valid DadosAutenticacao dadosAutenticacao) {
-        var token = new UsernamePasswordAuthenticationToken(dadosAutenticacao.login(), dadosAutenticacao.senha());
-        var authentication = authenticationManager.authenticate(token);
-        return ResponseEntity.ok(tokenService.gerarToken((Usuario) authentication.getPrincipal()));
+        var authenticationToken = new UsernamePasswordAuthenticationToken(dadosAutenticacao.login(), dadosAutenticacao.senha());
+        var authentication = authenticationManager.authenticate(authenticationToken);
+        var tokenJWT =  tokenService.gerarToken((Usuario) authentication.getPrincipal());
+        return ResponseEntity.ok(new DadosTokenJWT(tokenJWT));
     }
 }
